@@ -22,6 +22,7 @@ body, input, button, textarea {
 
 a{
     text-decoration:none;
+    color: ${({ theme }) => theme.COLORS.GRAY_300}
 }
 
 button, a {

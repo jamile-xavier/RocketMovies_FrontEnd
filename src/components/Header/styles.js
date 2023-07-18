@@ -8,12 +8,33 @@ export const Container = styled.header`
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  border-bottom-color: #3e3b47;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding: 0 80px;
+`;
+
+export const Logo = styled.text`
+  width: 164px;
+  height: 32px;
+
+  > strong {
+    font-size: 24px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
+`;
+
+export const Search = styled.input`
+  width: 630px;
+  height: 56px;
+  padding: 19px 24px;
+  border: none;
+  border-radius: 10px;
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 `;
 
 export const Profile = styled.div`
