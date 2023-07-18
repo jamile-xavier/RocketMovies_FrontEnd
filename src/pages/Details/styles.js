@@ -9,6 +9,12 @@ export const Container = styled.div`
   grid-template-areas:
     "header"
     "content";
+
+  > main {
+    grid-area: content;
+    overflow-y: scroll;
+    padding: 64px 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -32,5 +38,33 @@ export const Content = styled.div`
     font-size: 16px;
     margin-top: 40px;
     text-align: justify;
+  }
+
+  > .ranking {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-top: 24px;
+  }
+
+  > .created__by {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 48px;
+
+    img {
+      width: 16px;
+      height: 16px;
+      border-radius: 35px;
+    }
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
+  }
+
+  > .marcadores {
+    margin-top: 48px;
   }
 `;

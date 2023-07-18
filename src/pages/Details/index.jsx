@@ -2,6 +2,10 @@ import { Container, Content } from "./styles";
 
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
+import { Star } from "../../components/Star";
+import { Tag } from "../../components/Tag";
+
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 export function Details() {
   return (
@@ -10,7 +14,28 @@ export function Details() {
       <main>
         <Content>
           <ButtonText title="Voltar" />
-          <h1>Interestellar</h1>
+
+          <div className="ranking">
+            <h1>Interestellar</h1>
+            <Star />
+          </div>
+
+          <div className="created__by">
+            <img
+              src="https://github.com/jamile-xavier.png"
+              alt="Foto do usuário"
+            />
+            <p>Por Jamile Xavier</p>
+
+            <AiOutlineClockCircle />
+            <p>23/05/22 ás 08:00</p>
+          </div>
+
+          <div className="Marcadores">
+            <Tag title="Ficção Científica" />
+            <Tag title="Drama" />
+            <Tag title="Família" />
+          </div>
 
           <p>
             Pragas nas colheitas fizeram a civilização humana regredir para uma
