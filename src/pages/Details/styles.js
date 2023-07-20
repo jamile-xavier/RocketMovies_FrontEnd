@@ -40,6 +40,13 @@ export const Content = styled.div`
     text-align: justify;
   }
 
+  > a {
+    color: ${({ theme }) => theme.COLORS.PINK};
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
   > .ranking {
     display: flex;
     align-items: center;

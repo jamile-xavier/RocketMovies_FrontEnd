@@ -1,11 +1,12 @@
 import { Container, Content } from "./styles";
 
 import { Header } from "../../components/Header";
-import { ButtonText } from "../../components/ButtonText";
+import { LinkBack } from "../../components/LinkBack";
 import { Star } from "../../components/Star";
 import { Tag } from "../../components/Tag";
 
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { BiArrowBack } from "react-icons/bi";
 
 export function Details() {
   return (
@@ -13,7 +14,7 @@ export function Details() {
       <Header />
       <main>
         <Content>
-          <ButtonText title="Voltar" />
+          <LinkBack href="#" title="Voltar" />
 
           <div className="ranking">
             <h1>Interestellar</h1>
