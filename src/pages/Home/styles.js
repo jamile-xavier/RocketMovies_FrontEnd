@@ -8,20 +8,20 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  background: blue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 64px;
+  overflow-y: scroll;
 `;
 
 export const NewFilm = styled.button`
+  width: 207px;
+  height: 48px;
   background-color: ${({ theme }) => theme.COLORS.PINK};
   border: none;
   border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 12px 24px;
+  margin-bottom: 15px;
 
   > svg {
     margin-left: 8px;

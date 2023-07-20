@@ -12,12 +12,20 @@ export const Container = styled.header`
 
   display: flex;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   padding: 0 80px;
 `;
 
-export const Logo = styled.text`
+export const Search = styled.div`
+  width: 630px;
+  height: 56px;
+  padding: 0 19px 24px;
+  align-items: center;
+`;
+
+export const Logo = styled.div`
   width: 164px;
   height: 32px;
 
@@ -26,15 +34,6 @@ export const Logo = styled.text`
     font-weight: 700;
     color: ${({ theme }) => theme.COLORS.PINK};
   }
-`;
-
-export const Search = styled.input`
-  width: 630px;
-  height: 56px;
-  padding: 19px 24px;
-  border: none;
-  border-radius: 10px;
-  background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 `;
 
 export const Profile = styled.div`
