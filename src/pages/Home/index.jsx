@@ -11,7 +11,7 @@ export function Home() {
       <Header />
       <Content>
         <Section title="Meus filmes">
-          <NewFilm>
+          <NewFilm to="/new">
             <FiPlus />
             Adicionar filme
           </NewFilm>

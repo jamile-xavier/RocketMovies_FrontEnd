@@ -5,7 +5,7 @@ export function LinkBack({ title, href, ...rest }) {
   return (
     <Container>
       <FiArrowLeft />
-      <a href={href}>{title}</a>
+      <a to={href}>{title}</a>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import { Container, Content } from "./styles";
-
 import { Header } from "../../components/Header";
-import { LinkBack } from "../../components/LinkBack";
+import { Link } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 import { Star } from "../../components/Star";
 import { Tag } from "../../components/Tag";
 
@@ -14,7 +14,10 @@ export function Details() {
       <Header />
       <main>
         <Content>
-          <LinkBack href="#" title="Voltar" />
+          <Link to="/">
+            <FiArrowLeft />
+            Voltar
+          </Link>
 
           <div className="ranking">
             <h1>Interestellar</h1>

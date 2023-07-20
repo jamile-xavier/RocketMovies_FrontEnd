@@ -11,7 +11,7 @@ export function Header() {
       <Search>
         <Input placeholder="Pesquisar pelo título" />
       </Search>
-      <Profile>
+      <Profile to="/profile">
         <img src="https://github.com/jamile-xavier.png" alt="Foto do usuário" />
         <div>
           <strong>Jamile Xavier</strong>

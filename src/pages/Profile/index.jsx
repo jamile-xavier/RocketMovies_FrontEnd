@@ -1,6 +1,6 @@
 import { Container, Form, Avatar } from "./styles";
-
-import { LinkBack } from "../../components/LinkBack";
+import { Link } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 import { Input } from "../../components/Input";
 import { FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi";
 import { Button } from "../../components/Button";
@@ -9,7 +9,10 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <LinkBack href="#" title="Voltar" />
+        <Link to="/">
+          <FiArrowLeft />
+          Voltar
+        </Link>
       </header>
       <Form>
         <Avatar>

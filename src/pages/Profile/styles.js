@@ -13,6 +13,14 @@ export const Container = styled.div`
     align-items: center;
 
     padding: 0 124px;
+
+    > a {
+      margin-top: 42px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
   }
 `;
 

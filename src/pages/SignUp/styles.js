@@ -33,8 +33,12 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
-  > div:nth-child(8) {
+  > a {
     margin-top: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 `;
 
