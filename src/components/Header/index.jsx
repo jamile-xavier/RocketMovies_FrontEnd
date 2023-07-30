@@ -1,8 +1,14 @@
 import { Container, Logo, Search, Profile } from "./styles";
-
+import { Link } from "react-router-dom";
 import { Input } from "../../components/Input";
+import { useAuth } from "../../hooks/auth";
+import { api } from "../../services/api";
 
 export function Header() {
+  const { signOut, user } = useAuth();
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
   return (
     <Container>
       <Logo>
@@ -12,10 +18,12 @@ export function Header() {
         <Input placeholder="Pesquisar pelo título" />
       </Search>
       <Profile to="/profile">
-        <img src="https://github.com/jamile-xavier.png" alt="Foto do usuário" />
+        <img src={avatarUrl} alt={user.name} />
         <div>
-          <strong>Jamile Xavier</strong>
-          <a href="#">sair</a>
+          <strong>{user.name}</strong>
+          <Link to="../../pages/SignIn" onClick={signOut}>
+            sair
+          </Link>
         </div>
       </Profile>
     </Container>

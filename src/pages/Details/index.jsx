@@ -6,7 +6,6 @@ import { Star } from "../../components/Star";
 import { Tag } from "../../components/Tag";
 
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { BiArrowBack } from "react-icons/bi";
 
 export function Details() {
   return (
