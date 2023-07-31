@@ -29,9 +29,17 @@ export function New() {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
-  async function handleNewNote() {
+  async function handleNewMovie() {
     if (!title) {
-      return alert("Digite o título da nota");
+      return alert("Digite o título do filme");
+    }
+
+    async function handleRemoveMovie() {
+      const confirm = window.confirm("Deseja realmente remover a nota?");
+      if (confirm) {
+        await api.delete(`/notes/${params.id}`);
+        navigate(-1);
+      }
     }
 
     if (newTag) {
@@ -97,8 +105,8 @@ export function New() {
             </div>
           </Section>
           <Buttons>
-            <Button title="Excluir filme" />
-            <Button title="Salvar alterações" onClick={handleNewNote} />
+            <Button title="Excluir filme" onClick={handleRemoveMovie} />
+            <Button title="Salvar alterações" onClick={handleNewMovie} />
           </Buttons>
         </Form>
       </main>

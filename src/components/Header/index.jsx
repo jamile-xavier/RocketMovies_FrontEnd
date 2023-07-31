@@ -1,11 +1,18 @@
 import { Container, Logo, Search, Profile } from "./styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 
 export function Header() {
   const { signOut, user } = useAuth();
+  const navigation = useNavigate();
+
+  function handleSignOut() {
+    navigation("/");
+    signOut();
+  }
+
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
     : avatarPlaceholder;
@@ -21,7 +28,7 @@ export function Header() {
         <img src={avatarUrl} alt={user.name} />
         <div>
           <strong>{user.name}</strong>
-          <Link to="../../pages/SignIn" onClick={signOut}>
+          <Link to="../../pages/SignIn" onClick={handleSignOut}>
             sair
           </Link>
         </div>
