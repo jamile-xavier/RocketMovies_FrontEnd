@@ -1,8 +1,9 @@
-import { Container, Logo, Search, Profile } from "./styles";
+import { Container, Logo, Search, Profile, Logout } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 export function Header() {
   const { signOut, user } = useAuth();
@@ -28,9 +29,7 @@ export function Header() {
         <img src={avatarUrl} alt={user.name} />
         <div>
           <strong>{user.name}</strong>
-          <Link to="../../pages/SignIn" onClick={handleSignOut}>
-            sair
-          </Link>
+          <Logout onClick={handleSignOut}>sair</Logout>
         </div>
       </Profile>
     </Container>
