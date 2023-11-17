@@ -16,8 +16,6 @@ RocketMovies
 - 🛠 [Funcionalidades](#funcionalidades)
 - 💻 [Tecnologias](#tecnologias)
 - 💽 [Instalação](#instalação)
-  - [Back End](#rodando-o-back-end)
-  - [Front End](#rodando-o-front-end)
 - 👩 [Autora](#autora)
 - ➡ [Links](#links)
   - [GitHub Front End](#github-front-end)
@@ -50,32 +48,6 @@ RocketMovies
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
-
-# Rodando o Back End
-
-```bash
-# Clone este repositório
-$ git clone https://github.com/jamile-xavier/RocketMovies_BackEnd
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd RocketMovies_BackEnd
-
-# Modifique o arquivo .env.example para .env e inclua uma porta e um secret para utilização do jwt no projeto.
-  AUTH_SECRET=
-  PORT=
-
-# Instale as dependências
-$ npm i
-
-# Faça execução das migrations
-$ npm run migrate
-
-# Execute a aplicação no modo de desenvolvimento
-$ npm run dev
-
-# Aparecerá a mensagem Server is running on port <Número da porta>.
-
-```
 
 # Rodando o Front End
 
